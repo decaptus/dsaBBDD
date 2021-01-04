@@ -12,7 +12,7 @@ score INTEGER,
 level INTEGER
 )ENGINE = InnoDB;
 
-INSERT INTO User(username, email, password, birthdate, score, level) VALUES ('Marta1','marta@gmail.com','Martacontra', '27/12/1998', 0, 1); 
+INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Marta1','marta@gmail.com','Martacontra', '27/12/1998', 0, 1); 
 INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Cacatua2','cacatua@gmail.com','Cacatuacontra', '27/12/1998', 0, 1);
 INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Montse3','montse@gmail.com','Montsecontra', '27/12/1998', 0, 1); 
 INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Pere4','pere@gmail.com','Perecontra', '27/12/1998', 0, 1); 
@@ -21,6 +21,19 @@ INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('M
 INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Sol7','sol@gmail.com','Solcontra', '27/12/1998', 0, 1); 
 INSERT INTO User(username, email, password, birthdate, score, level)  VALUES ('Kei8','kei@gmail.com','Keicontra', '27/12/1998', 0, 1); 
 
+CREATE TABLE Item
+( objeto TEXT NOT NULL, 
+id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
+hit INTEGER,
+defense INTEGER,
+healing INTEGER,
+damage INTEGER
+)ENGINE = InnoDB;
+
+INSERT INTO Item(objeto, hit, defense, healing, damage) VALUES ('Defense', 3, 4, 5, 6);
+INSERT INTO Item(objeto, hit, defense, healing, damage) VALUES ('Weapone', 3, 0, 0, 4); 
+INSERT INTO Item(objeto, hit, defense, healing, damage) VALUES ('Weapone', 1, 0, 0, 6); 
+INSERT INTO Item(objeto, hit, defense, healing, damage) VALUES ('Defense', 5, 0, 5, 0);  
 
 CREATE TABLE Partidas
 ( id  INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL, 
